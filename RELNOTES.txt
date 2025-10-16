@@ -1,0 +1,366 @@
+         Release Notes for P4GT Maya
+         P4 Plug-in for Graphical Tools
+
+		     Release 2025.1
+
+Introduction
+
+	P4GT, the P4 Plug-in for Graphical Tools, integrates P4 with
+	Autodesk Maya.
+
+	These notes include release-specific information about the P4
+	Plug-in for Graphical Tools.
+
+--------------------------------------------------------------------------
+
+Important Product Rebrand Notice
+
+    Helix Core is now P4
+    Perforce has a new look and logo that reflects our place in DevOps
+    workflows. As part of these changes, Helix Core is now P4. Name updates
+    and new icons to align with the P4 branding will be rolled out soon.
+    To learn more, see:
+        https://www.perforce.com/blog/vcs/introducing-the-P4-platform
+
+--------------------------------------------------------------------------
+
+Installing P4GT
+
+	To install P4GT Maya 2025.1, download the P4GT Maya 2025.1 installer from
+	the P4 website and run it.  The P4GT English plug-in is only
+	compatible with English version of Maya.
+
+	P4GT Maya is compatible with:
+
+	* Autodesk Maya 64-bit 2026
+
+	P4GT is available on Windows 10, 11 for Intel (x64),
+
+	Windows Server 2012, 2016, 2019 and 2022.
+
+	You can use P4GT with minimum supported P4 server version or higher.
+
+Loading the P4 menu in Maya
+
+	After installing P4GT Maya, you must configure Autodesk Maya to load the P4 
+	menu as follows:
+	
+	1. In Maya, choose Windows>Settings/Preferences>Plug-in Manager.  
+	
+	2. In the Plug-in Manager dialog, type "P4GT" to find P4GT-Maya-2026_x64.mll
+	   and check "Loaded", then select "Auto-Load." 
+
+--------------------------------------------------------------------------------
+
+New functionality in 2025.1
+
+	#2796683, #2796799 (Job #124769, #125778)
+	    Support for Maya 2026 , p4api 2025.1
+
+--------------------------------------------------------------------------------
+
+New functionality in 2024.2
+
+	#2715119, #2715047, #2713819 (Job #123176)
+	    Support for Mend scan and license file generation
+
+	#2709245, #2353362 (Job #112707)
+	    Adding a fix for Maya check-in dialog box 
+
+	#2669929, #2659915, #2659876 (Job #119970)
+	    Fixing Maya Windows installer ProductVersion
+
+	#2710165, #2700583, #2655113, #2654667, #2653186, #2653176 (Job #121749)
+	    Support for Maya 2025, p4api 2024.2, openssl 3 and support Windows 11 intel x64 for Maya 2025
+
+--------------------------------------------------------------------------------
+
+New functionality in 2023.1
+
+	#2484885, #2481114, #2481046, #2480988, #2480662, #2480661, #2480378,
+	#2480374, #2480367, #2478222 (Job #116153)
+	    Built P4GT Maya with P4API 2023.1 (2023.1/2442900) and added support for
+	    Maya 2024
+
+--------------------------------------------------------------------------------
+
+New functionality in 2022.1
+
+	#2350662 (Sir #112597)
+	    Added support for Maya 2023.
+
+--------------------------------------------------------------------------------
+
+Bugs Fixed in 2021.1 Patch 2
+        #2263355 (Bug# 109900)
+        P4GT Maya now uses OpenSSL 1.1.1n, which addresses possible
+        vulnerability: CVE-2022-0778.
+--------------------------------------------------------------------------------
+
+Bugs Fixed in 2021.1 Patch 1
+	#2198585 (Bug# 107714)
+	    Fix for Japanese strings not displaying correctly in Perforce menus/dialog.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2021.1
+
+	#2159096 (Sir #106901)
+	    Added support for Maya 2022.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2020.1
+
+	#2127678 (Sir #105956)
+	    Added support for Maya 2020.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2019.1
+
+	#1771783 (Sir #97887)
+	    Added support for Maya 2019.
+
+Bugs fixed in 2019.1
+
+	#1812621 (Bug #98963)
+	    Improve Unicode support.
+
+	#1812315 (Bug #98939)
+	    An untitled Maya Japanese project could cause a crash.  This crash
+	    has been corrected.
+
+	#1774201 (Bug #97891)
+	    Release notes and help file are no longer installed with the plugin.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2018.1
+
+	#1682688 (Sir #95848)
+	    Added support for Maya 2018.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2017.1
+
+	#1622817 (Sir #93447)
+	    Added support for Maya 2017.
+
+--------------------------------------------------------------------------------
+
+Bugs fixed in Patch 3 since 2015.1/1205848 (Patch 2)
+
+    #1209953 (Sir #78556) *
+        Added support for Maya 2016.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2015.1
+
+	#962021 (Sir #73395) *
+	    Added support for Maya 2015.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2014.1
+
+	#762421 (Sir #68237) *
+	    Added support for Maya 2014.
+
+Bugs fixed in 2014.1
+
+	#802751 (Bug #47476)
+	    Now after syncing to latest or prior revisions of a file in 
+	    3ds Max 2013/2014 and Maya 2013/2014 the correct version of 
+	    file is opened. Prior to this the file was not opened.
+
+--------------------------------------------------------------------------------
+
+New functionality since 2011.1/389946
+
+	#562414 (Sir #60147) *
+	    Added support for Maya 2013.
+
+New functionality in 2011.1
+
+	#322716
+	    Enable stream support for all plug-ins.
+
+	#318402, 319179, 319203, 319215, 320108, 320142, 320181, 320675, 320683, 
+		321560, 321581, 321745, 321748, 321755, 322382
+	    Added support for Photoshop CS5.5, Softimage/3ds Max/Maya 2012.
+
+Bugs fixed in 2011.1
+
+	#385159 (Bug #49324) *
+	    On Windows Vista, Windows 7, or Windows 2008, a client running as
+	    Administrator would fail to properly process file names in
+    	    non-ASCII character sets (such as Shift-JIS).
+
+--------------------------------------------------------------------------------
+
+New functionality in 2010.1
+
+	#254766,254769,254786,254792,254809,254814(Bug #38743,38744,38745,38746)
+	    Added support for Photoshop CS5, Softimage/3ds Max/Maya 2011.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2009.3
+
+	#231391,231394,231395,231396,231400,231813 (Bug #35383,35384)
+	    Added support for Softimage 2010 and Maya 2010.
+
+--------------------------------------------------------------------------------
+
+New functionality in 2008.2
+
+	#167380 **
+	    Added support for Maya 2009. (Sir #30836)
+
+	#164863 **
+	    Added drop-down selection to Submit dialog to support all the 
+	    submit options. Requires server version 2006.2 or
+	    later.  (Sir #30290)
+	    
+	#164302 **
+	    Added "select/unselect all files" checkbox to Submit dialog.
+	    (Sir #28996)
+
+Bugs fixed since 2008.2/179173 (first release)
+
+	#184670 **
+	    Fix sync button resize issue in History dialog. (Bug #32164)
+
+	#182922 **
+	    Fixed crash when clicking on Have Revision column header under
+	    Get Latest Revision from Perforce. (Bug #32104)	    	
+
+Bugs fixed in 2008.2
+
+	#177468 **
+	    File name no longer truncated in the Get Latest Revision/Checkout 
+	    dialog.
+	    (Bug #31756)
+
+	#172039 **
+	    Changed "Document" to "File". (Sir #30825)
+
+--------------------------------------------------------------------------------
+
+Support added since 2008.1/159864 (first release)
+
+	#162658 **
+	    Added support for 64-bit version of Maya 2008. (Sir #30288)
+	
+
+New functionality in 2008.1
+	    
+	#158038 **
+	    New option added to enable files to be reverted upon close. Check-in
+	    option takes precedence. (Sir #18988) 
+
+	#155592 **
+	    More file info displayed in depot browser. (Sir #15263)
+	    
+	#152636 **
+	    Default submit option changed to show all opened files. (Sir #29013)
+
+	#152633 **
+	    Added new checkbox to Submit dialog for leaving unchanged files in
+	    default changelist. Requires server 2006.2 or later. (Sir #21404)
+
+
+Bugs fixed since 2008.1/159864 (first release)
+
+	#182911 **
+	    Fixed crash when clicking on Have Revision column header under
+	    Get Latest Revision from Perforce. (Bug #32104)
+
+--------------------------------------------------------------------------------
+
+New functionality in 2007.3
+
+	#134348 **
+	    Support for Maya 8.5 and 2008 (Sir #24774 & Sir #26233)
+
+--------------------------------------------------------------------------------
+
+New functionality in 2007.2
+
+	#117485 **
+	    Support for Maya 8.0 (Sir #22405)
+
+Bugs fixed in 2007.2
+
+	#116888
+	    Improved handling when a depot named "depot" doesn't exist.
+	    (Bug #17420)
+
+--------------------------------------------------------------------------------
+
+New functionality in 2005.1
+
+	#86109 **
+	    Support for Maya 7.0 (Sir #19816)
+
+	#87101 **
+	    Support for Unicode enabled servers. (Sir #15522)
+
+	#87101 **
+	    Added a "sync to" option in the document history dialog. 
+	    (Sir #15509)
+
+Bugs fixed since the first release of 2005.1
+
+Bugs fixed in 2005.1
+
+	#89538 **
+	    Fix a problem when a file outside of the workspace view was added 
+	    into Perforce. (Bug #19475)
+
+	#87101 **
+	    When showing the results of the last command, the locking 
+	    operation is no longer shown. (Sir #18373)
+
+	#87101 **
+	    Filenames are now included with the prompting dialogs. (Sir #16023)
+
+	#87101 **
+	    Fixed a problem if the server did not have a depot called "depot" 
+	    when using the "Open From Perforce" functionality. (Bug #17420)
+
+	#87101 **
+	    When using the "Open From Perforce" option, the default view is now 
+	    "details". (Sir #15729)
+
+--------------------------------------------------------------------------------
+
+New functionality in 2004.2
+
+	Support for Maya 6.5, Photoshop CS2 and 3ds Max 7
+
+	Ability to access Perforce depots from within the graphical tools,
+	including filtering on filetypes.
+
+	Working offline using the "Disconnect/Connect To Server" menu option. 
+
+Bugs fixed in 2004.2
+
+	There is no longer a warning message when opening a file
+	that is not under the client root.(Sir #16738) 
+
+	Installer now allows for multiple installs and gives you
+	a choice of what programs to install for.(Sir #15826) 
+
+	Installer now fails gracefully if it is installed on a 
+	system without one of the tools previously installed.(Bug #16008) 
+
+	Fixed a problem with the Open From Perforce browser where
+	the icons stop responding. (Bug #16027) 
+
+	Fixed a problem with the Open From Perforce browser when
+	the user didn't have permission to view the top level of the depot.
+	(Bug #16119) 

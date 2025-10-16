@@ -1,0 +1,80 @@
+##
+## P4GT Maya 2026 (2026 for Autodesk Maya 2026)
+##
+## TYPE=dyn or dyng
+##
+## We are using the BUILD={en,ja} for building P4GT.
+##
+##
+
+SubDir P4GT maya ;
+
+P4ClientHdrs ;
+
+SubDirHdrs $(P4GT) sdk maya include ;
+SubDirHdrs $(P4GT) libp4gt ;
+
+SubDirC++Flags /EHsc ;
+
+WinDefines : UNICODE _UNICODE ;
+
+P4GTDefines ;
+
+local DLLFILE     = P4GT-Maya-2026_x64.mll ;
+local GTLIBFILE   = libp4gt.lib ;
+local MAYALIBFILE = libp4gt-maya.lib ;
+local DEFFILE     = P4GTMaya_x64.def ;
+local RCFILE      = P4GTMaya.rc ;
+
+if $(LANG) = ja
+{
+	DLLFILE     = P4GT-Maya-2026_x64_ja.mll ;
+	GTLIBFILE   = libp4gt_ja.lib ;
+	MAYALIBFILE = libp4gt-maya_ja.lib ;
+	DEFFILE     = P4GTMaya_x64_ja.def ;
+	RCFILE      = P4GTMaya_ja.rc ;
+}
+
+Main $(DLLFILE) : P4GTMaya.cpp ;
+
+# P4GT should always be a TYPE=dyn or dyng build
+#
+local P4LIBPATH   = $(P4BIN)$(SLASH)bin.nt$(OSPLAT:L)$(SLASH)$(TYPE)$(SLASH) ;
+local P4GTLIBPATH = $(P4GT)$(SLASH)sdk$(SLASH)maya$(SLASH)lib$(SLASH) ;
+
+Library $(MAYALIBFILE) : 
+	AboutCommand.cpp
+	AddCommand.cpp
+	CallbackManager.cpp
+	CheckInCommand.cpp
+	CheckOutCommand.cpp
+	debug.cpp
+	HelpCommand.cpp
+	HistoryCommand.cpp
+	InfoCommand.cpp
+	LastResults.cpp
+	LockCommand.cpp
+	MayaHost.cpp
+	OnlineCommand.cpp
+	OpenCommand.cpp
+	OpenedCommand.cpp
+	OptionsCommand.cpp
+	StatusCommand.cpp
+	UndoCommand.cpp
+	UpdateMenuCommand.cpp
+	;
+
+LinkLibraries $(DLLFILE) : 
+	$(MAYALIBFILE)
+	$(GTLIBFILE) 
+	$(P4LIBPATH)$(P4APILIB) 
+	$(P4GTLIBPATH)Foundation.lib
+	$(P4GTLIBPATH)OpenMaya.lib
+	$(P4GTLIBPATH)OpenMayaUI.lib
+	;
+
+WinRes $(DLLFILE) : $(RCFILE) ;
+WinDllDeffile2 $(DLLFILE) : $(DEFFILE) ;
+
+P4GTLinkage $(DLLFILE) ;
+

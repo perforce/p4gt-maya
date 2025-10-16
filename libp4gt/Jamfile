@@ -1,0 +1,62 @@
+SubDir P4GT libp4gt ;
+
+# The Microsoft library archiver will emit ugly warning messages if you
+# archive an object file which has not changed.  This will occur if
+# one does a jam -a in libp4gt, then does a jam -a in the top level p4-gt
+# directory, or the reverse.  Disabling these stupid warning messages.
+#
+AR = lib /nologo /ignore:4006 /ignore:4221 /MACHINE:$(OSPLAT) ;
+
+# Ensure all compiled files use the same runtime library
+C++FLAGS += /MD ;
+
+P4ClientHdrs ;
+
+# Define _UNICODE
+P4WinDefines ;
+
+P4GTDefines ;
+
+P4GTLIBFILE = libp4gt ;
+if $(LANG) = ja
+{
+	P4GTLIBFILE = libp4gt_ja ;
+}
+
+WinResIdent libp4gt.rc ;
+Ident Version.cpp ;
+
+Library $(P4GTLIBFILE) :
+	AboutDialog.cpp
+	CheckInAddDialog.cpp
+	ConnectionDialog.cpp
+	debug.cpp
+	Dialog.cpp
+	ExternalRefDialog.cpp
+	FileOpDialog.cpp
+	FullSubmitDialog.cpp
+	HistoryDialog.cpp
+	MenuState.cpp
+	OldVersionDialog.cpp
+	OpenDepotDialog.cpp
+	OpenFilesDialog.cpp
+	OptionsDialog.cpp
+	PasswordDialog.cpp
+	PerforceCommand.cpp
+	PerforceConnection.cpp
+	PerforceFileStat.cpp
+	PerforceOptions.cpp
+	PerforceResults.cpp
+	PluginHost.cpp
+	PluginOperations.cpp
+	ResolveDialog.cpp
+	ResultsDialog.cpp
+	StatusDialog.cpp
+	StrBufArray.cpp
+	TabbedOptionsDialog.cpp
+	Translate.cpp
+	UniStrBuf.cpp
+	UniStrDict.cpp
+	Version.cpp
+	;
+

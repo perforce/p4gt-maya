@@ -1,0 +1,47 @@
+//
+// Copyright 2004 Perforce Software.  All rights reserved.
+//
+// This file is part of P4GT.
+//
+
+//
+// Create Perforce menu on main menubar
+//
+global proc perforceCreateUI_ja () {
+  menu -p MayaWindow -label "P4" -tearOff false -pmc p4UpdateMenu PerforceMenu;
+		// "Add to P4"
+    menuItem -label "P4に追加" -command p4Add PerforceAddMenuItem;
+		// "Check Out"	
+    menuItem -label "チェックアウト" -command p4Edit PerforceCheckOutMenuItem;
+		// "Check In..."
+    menuItem -label "チェックイン..." -command p4Submit PerforceCheckInMenuItem;
+		// "Lock/Unlock Document"
+    menuItem -label "ロック/ロック解除" -command p4Lock PerforceLockMenuItem;
+		// "Undo Add/Check Out"
+    		// menuItem -label "追加/チェックアウトを元に戻す" -command p4Revert PerforceUndoMenuItem;
+    menuItem -label  "チェックアウトを元に戻す" -command p4Revert PerforceUndoMenuItem;
+    menuItem -divider true;
+		// "Result of Last Command..."
+    menuItem -label "最後のコマンドの結果" -command p4Results PerforceResultsMenuItem;
+		// "Document Status..."
+    menuItem -label "ドキュメントの状態" -command p4Stat PerforceStatusMenuItem;
+		// "Document History..."	
+    menuItem -label "ドキュメントの履歴" -command p4History PerforceHistoryMenuItem;
+		// "Checked Out Documents..."
+    menuItem -label "チェックアウトされたドキュメント" -command p4Opened PerforceOpenedMenuItem;
+		// "P4 Information..."
+    menuItem -label "P4の情報" -command p4Info PerforceInfoMenuItem;
+    menuItem -divider true;
+		// "Get Latest Revision from P4..."
+    menuItem -label "P4から最新リビジョンを取得" -command p4Open PerforceOpenMenuItem;
+    menuItem -divider true;
+		// "Options..."
+    menuItem -label "オプション" -command p4Options PerforceOptionsMenuItem;
+		// "Help..."
+    menuItem -label "ヘルプ" -command p4Help PerforceHelpMenuItem;
+		// "About P4GT..."
+    menuItem -label "P4GTについて" -command p4About PerforceAboutMenuItem;
+    menuItem -divider true;
+		// "Disconnect from Server"
+    menuItem -label "サーバとの接続を切断" -command p4Online PerforceOnlineMenuItem;
+}

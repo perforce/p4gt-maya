@@ -1,0 +1,13 @@
+//
+// Copyright 2004 Perforce Software.  All rights reserved.
+//
+// This file is part of P4GT.
+//
+
+//
+// Remove Perforce menu from main menubar
+//
+
+global proc perforceDeleteUI () {
+  deleteUI PerforceMenu;
+}

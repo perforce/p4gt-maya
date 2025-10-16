@@ -1,0 +1,770 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "libp4gt_rc.h"
+#include "version.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+//#include "afxres.h"
+#include "WinResrc.h"
+#define IDC_STATIC  -1
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "libp4gt_rc.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FILE_OP_DIALOG DIALOG  0, 0, 324, 182
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Filename:",IDC_STATIC,5,5,60,8
+    EDITTEXT        IDC_FILENAME_EDIT,5,15,315,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Result:",IDC_STATIC,5,30,50,8
+    EDITTEXT        IDC_RESULTS_EDIT,5,40,315,110,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,135,165,50,14
+    CONTROL         "&Don't show this dialog again.",IDC_HIDE_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,110,10
+END
+
+IDD_OPEN_FILES_DIALOG DIALOG  0, 0, 329, 157
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - Checked Out Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,139,140,50,14
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | WS_BORDER |
+                    WS_TABSTOP,5,15,320,115
+    LTEXT           "&Files:",IDC_STATIC,5,5,80,8
+END
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 264, 152
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Display confirmation dialogs (on add/check out):",
+                    IDC_STATIC,5,5,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_SHOW_DIALOGS_COMBO,200,5,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&View other files in changelist when checking in:",
+                    IDC_STATIC,5,20,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_OTHER_DOCS_COMBO,200,20,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Lock file when checking out:",IDC_STATIC,5,35,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_AUTO_LOCK_COMBO,200,35,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Check in immediately after &adding a file to P4:",
+                    IDC_STATIC,5,50,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CHECK_IN_ADD_COMBO,200,50,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Check out when &opening file:",IDC_STATIC,5,65,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_OPEN_COMBO,200,65,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Check out when &reopening file after undo (revert):",
+                    IDC_STATIC,5,80,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_REOPEN_COMBO,200,80,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Check in when &closing file:",IDC_STATIC,5,95,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_CLOSE_COMBO,200,95,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Sync external file references when opening file:",
+                    IDC_REFS_STATIC,5,110,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_FILE_REF_COMBO,200,110,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,77,135,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,135,50,14
+END
+
+IDD_OLD_VERSION_DIALOG DIALOGEX 0, 0, 471, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Get Latest Revision/Checkout"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "This file is in P4.",IDC_DOCUMENT_TEXT,10,5,
+                    454,8
+    LTEXT           "",IDC_VERSION_TEXT,10,20,454,20
+    LTEXT           "Click 'Get Latest Revision' to copy the latest version from the depot to your computer which you can then check out.",
+                    IDC_STATIC,7,45,457,20
+    LTEXT           "Click 'Checkout' to check your current version out - you will be required to resolve your changes with the newest version in P4 when you check in.",
+                    IDC_STATIC,7,70,457,30
+    DEFPUSHBUTTON   "&Get Latest Revision",IDSYNC,134,105,81,14
+    PUSHBUTTON      "Check&out",IDCHECKOUT,226,105,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,287,105,50,14
+END
+
+IDD_ABOUT_DIALOG DIALOGEX 0, 0, 269, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - About"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,75,50,14
+    LTEXT           "",IDC_PLUGIN_NAME_TEXT,5,5,255,8
+    LTEXT           "",IDC_APP_VERSION_TEXT,5,30,260,8
+    LTEXT           "",IDC_WIN_VERSION_TEXT,5,39,260,8
+    LTEXT           P4_COPYRIGHT,
+                    IDC_COPYRIGHT_TEXT,5,55,175,8
+    LTEXT           "",IDC_PLUGIN_VERSION_TEXT,5,14,255,8
+    PUSHBUTTON      "Copy to Clipboard",IDCOPY,193,75,69,14
+END
+
+IDD_OPEN_DEPOT_DIALOG DIALOGEX 0, 0, 275, 185
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - Get Latest Revision from P4"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Look in:",IDC_STATIC,5,5,30,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_LOOK_IN_COMBO,"ComboBoxEx32",CBS_DROPDOWNLIST |
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,35,5,136,90
+    CONTROL         "List1",IDC_DEPOT_LIST,"SysListView32",LVS_SINGLESEL |
+                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,5,24,263,
+                    110
+    LTEXT           "&File name:",IDC_FILE_NAME_LABEL,5,140,50,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OPEN_FILE_EDIT,59,140,142,12,ES_AUTOHSCROLL
+    LTEXT           "Files of &type:",IDC_FILE_TYPE_LABEL,5,157,48,12,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_FILE_TYPE_COMBO,"ComboBoxEx32",CBS_DROPDOWNLIST |
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,59,156,142,98
+    DEFPUSHBUTTON   "Open",IDOK,218,140,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,218,158,50,14
+END
+
+IDD_HISTORY_DIALOG DIALOGEX 0, 0, 408, 210
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - File History"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "List1",IDC_HISTORY_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,5,394,95
+    LTEXT           "",IDC_HISTORY_DESC_TEXT,5,106,155,8
+    EDITTEXT        IDC_HISTORY_DESC_EDIT,7,115,394,65,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&View",ID_VIEW,7,188,50,14
+    DEFPUSHBUTTON   "Close",IDCANCEL,350,188,50,14
+    PUSHBUTTON      "&Sync",ID_SYNC,68,188,50,14
+END
+
+IDD_STATUS_DIALOG DIALOG  0, 0, 309, 197
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - File Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Depot path:",IDC_STATIC,5,5,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_DEPOT_PATH_EDIT,55,5,250,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Client path:",IDC_STATIC,5,20,34,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_PATH_EDIT,55,20,250,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "File type:",IDC_STATIC,5,40,31,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILE_TYPE_EDIT,100,40,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Latest (head)  revision in depot :",IDC_STATIC,5,55,95,
+                    12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_REVISION_EDIT,100,55,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Revision in your workspace:",IDC_HAVE_REVISION_LABEL,
+                    160,55,85,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HAVE_REVISION_EDIT,260,55,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Latest (head) action in depot:",IDC_STATIC,5,70,87,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_ACTION_EDIT,100,70,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Latest (head) changelist in depot: ",
+                    IDC_HEAD_CHANGE_LABEL,160,70,101,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_CHANGE_EDIT,260,70,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Open by you for:",IDC_STATIC,5,85,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_ACTION_EDIT,100,85,45,12,ES_RIGHT | ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "In changelist:",IDC_CHANGE_LABEL,160,85,40,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CHANGE_EDIT,260,85,45,12,ES_RIGHT | ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Last modified in depot:",IDC_STATIC,5,105,68,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_TIME_EDIT,100,105,205,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Open by P4 user(s):",IDC_STATIC,5,120,90,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OPENED_BY_EDIT,100,120,205,37,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | NOT
+                    WS_TABSTOP
+    LTEXT           "Locked by:",IDC_LOCKED_BY_LABEL,5,160,40,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_LOCKED_BY_EDIT,100,160,205,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,129,180,50,14
+END
+
+IDD_CONNECTION_DIALOG DIALOG  0, 0, 259, 172
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - P4 Connection Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "User name:",IDC_STATIC,5,5,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_USER_NAME_EDIT,60,5,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Client host:",IDC_CLIENT_HOST_LABEL,145,5,36,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_HOST_EDIT,195,5,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Client name:",IDC_STATIC,5,20,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_NAME_EDIT,60,20,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Client address:",IDC_CLIENT_ADDRESS_LABEL,145,20,45,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_ADDRESS_EDIT,195,20,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Client root:",IDC_STATIC,5,35,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_ROOT_EDIT,60,35,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Current directory:",IDC_STATIC,5,50,50,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CURRENT_DIRECTORY_EDIT,60,50,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Server address:",IDC_STATIC,5,75,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_ADDRESS_EDIT,60,75,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Server date:",IDC_STATIC,5,90,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_DATE_EDIT,60,90,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Server version:",IDC_STATIC,5,105,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_VERSION_EDIT,60,105,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Server license:",IDC_STATIC,5,120,45,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_LICENSE_EDIT,60,120,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Server root:",IDC_STATIC,5,135,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_ROOT_EDIT,60,135,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,104,155,50,14
+END
+
+IDD_RESULTS_DIALOG DIALOG  0, 0, 324, 152
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "xxxx"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Result:",IDC_STATIC,5,5,45,8
+    EDITTEXT        IDC_RESULTS_EDIT,5,15,315,110,ES_MULTILINE |
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,137,135,50,14
+END
+
+IDD_OLD_FULL_SUBMIT_DIALOG DIALOG  0, 0, 329, 300
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - Check In to P4"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Change Description:",IDC_STATIC,5,5,95,8
+    EDITTEXT        IDC_CHANGE_DESC_EDIT,5,15,320,55,ES_MULTILINE |
+                    ES_WANTRETURN
+    LTEXT           "Job &Status:",IDC_STATUS_LABEL,180,75,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_JOB_STATUS_COMBO,220,75,105,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Jobs:",IDC_JOBS_LABEL,5,80,40,8
+    CONTROL         "List1",IDC_OPEN_JOB_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,90,320,55
+    LTEXT           "&Files:",IDC_DOCUMENTS_LABEL,5,155,65,8
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,165,320,50
+    CONTROL         "&Keep checked out",IDC_KEEP_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,220,150,10
+    DEFPUSHBUTTON   "Submit",IDOK,110,237,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,237,50,14
+END
+
+IDD_FULL_SUBMIT_DIALOG DIALOG  0, 0, 329, 270
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - Check In to P4"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Change Description:",IDC_STATIC,5,5,95,8
+    EDITTEXT        IDC_CHANGE_DESC_EDIT,5,15,320,55,ES_MULTILINE |
+                    ES_WANTRETURN
+    LTEXT           "Job &Status:",IDC_STATUS_LABEL,180,75,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_JOB_STATUS_COMBO,220,75,105,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Jobs:",IDC_JOBS_LABEL,5,80,40,8
+    CONTROL         "List1",IDC_OPEN_JOB_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,90,320,55
+    CONTROL         "&Files:",IDC_SELECT_ALL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,65,8
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,165,320,50
+    CONTROL         "&Keep checked out",IDC_KEEP_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,220,120,10
+    LTEXT           "&On submit:",IDC_SUBMIT_OPTIONS_LABEL,175,220,40,12,
+    				SS_CENTERIMAGE
+    COMBOBOX        IDC_SUBMIT_OPTIONS_COMBO,215,220,110,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Submit",IDOK,110,237,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,237,50,14
+END
+
+IDD_EXTERNAL_REF_DIALOG DIALOG  0, 0, 279, 137
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "P4GT - Sync External Reference Files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You have old versions of the external reference files listed below. Click Sync to copy the latest versions of the checked files from the depot to your computer.",
+                    IDC_STATIC,5,5,270,20
+    CONTROL         "List1",IDC_FILES_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER |
+                    WS_BORDER | WS_TABSTOP,5,25,270,85
+    DEFPUSHBUTTON   "Sync",IDOK,84,120,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,120,50,14
+END
+
+IDD_RESOLVE_DIALOG DIALOGEX 0, 0, 274, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Resolve Conflicts"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "You've edited an old version of this file, or another user has checked a new version into the depot. What would you like to do?",
+                    IDC_STATIC,5,5,262,20
+    CONTROL         "&Cancel the check-in (keep checked out).",
+                    IDC_CANCEL_RADIO,"Button",BS_AUTORADIOBUTTON,5,25,155,10
+    CONTROL         "Check in your &version, superseding the changes in the current depot version.",
+                    IDC_CHECK_IN_RADIO,"Button",BS_AUTORADIOBUTTON,5,35,262,
+                    10
+    CONTROL         "&Undo check-out and discard your changes.",
+                    IDC_UNDO_RADIO,"Button",BS_AUTORADIOBUTTON,5,45,176,10
+    DEFPUSHBUTTON   "OK",IDOK,82,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,65,50,14
+END
+
+IDD_PASSWORD_DIALOG DIALOG  0, 0, 199, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - P4 Password Required"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "xx df dfjkdfg dfhg kdfgh dfkg dkfjgh dfgh dfgh dfgh dkjfgh dkfgh dkfgh dkjfgh dkg dkfg dkjghdk gkh gkjd",
+                    IDC_USER_PORT_TEXT1,5,5,190,20
+    LTEXT           "Please enter the password:",IDC_STATIC,5,30,105,10
+    EDITTEXT        IDC_PASSWORD_EDIT,5,40,190,12,ES_PASSWORD |
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,90,60,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,145,60,50,14
+END
+
+IDD_CHECK_IN_ADD_DIALOG DIALOGEX 0, 0, 179, 67
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Add File to P4"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,50,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,50,50,14
+    LTEXT           "You have successfully added the file to P4 - would you like to check it in now?",
+                    IDC_STATIC,5,5,168,20
+    CONTROL         "&Don't show this dialog again.",IDC_HIDE_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,30,135,10
+END
+
+IDD_TABBED_OPTIONS_DIALOG DIALOGEX 0, 0, 255, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+CAPTION "P4GT - Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,89,285,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,285,50,14
+    CONTROL         "",IDC_OPTIONS_TAB,"SysTabControl32",WS_TABSTOP,2,5,251,
+                    248
+    LTEXT           "Static",IDC_PLACEHOLDER_LABEL,15,25,19,8
+    PUSHBUTTON      "Apply",IDAPPLY,202,285,50,14
+END
+
+IDD_OPTIONS_PAGE1_DIALOG DIALOGEX 0, 0, 235, 177
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "When &adding a file to P4, check in immediately:",
+                    IDC_STATIC,7,7,221,8
+    CONTROL         "Always",IDC_ADDING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,18,84,10
+    CONTROL         "Never",IDC_ADDING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,30,95,10
+    CONTROL         "Prompt",IDC_ADDING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,42,90,10
+    LTEXT           "When checking out a file, automatically &lock it (prevent others from checking it in while you have it checked out):",
+                    IDC_STATIC,6,60,219,18
+    CONTROL         "Always",IDC_LOCK_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,78,90,10
+    CONTROL         "Never",IDC_LOCK_NEVER_RADIO,"Button",BS_AUTORADIOBUTTON,
+                    30,90,102,10
+    CONTROL         "Prompt",IDC_LOCK_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,102,90,10
+    LTEXT           "When checking in a file:",IDC_STATIC,6,120,204,8
+    CONTROL         "&View other files in changelist",
+                    IDC_OTHER_DOCS_CHECK,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,30,132,144,10
+    LTEXT           "Informational prompts:",IDC_STATIC,6,150,162,8
+    CONTROL         "Display &confirmation dialogs (on add/check out)",
+                    IDC_CONFIRM_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    30,162,198,10
+END
+
+IDD_OPTIONS_PAGE2_DIALOG DIALOGEX 0, 0, 235, 251
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "When &opening a file, check out from P4:",
+                    IDC_STATIC,7,7,221,8
+    CONTROL         "Always",IDC_OPENING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,18,78,10
+    CONTROL         "Never",IDC_OPENING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,30,84,10
+    CONTROL         "Prompt",IDC_OPENING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,42,84,10
+    LTEXT           "When &reopening a file, after undo (reverting), check out from P4:",
+                    IDC_STATIC,6,60,222,18
+    CONTROL         "Always",IDC_REOPENING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,78,96,10
+    CONTROL         "Never",IDC_REOPENING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,90,96,10
+    CONTROL         "Prompt",IDC_REOPENING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,102,102,10
+    LTEXT           "When closing a file, chec&k in to P4:",
+                    IDC_STATIC,6,120,222,8
+    CONTROL         "Always",IDC_CLOSING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,132,102,10
+    CONTROL         "Never",IDC_CLOSING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,144,90,10
+    CONTROL         "Prompt",IDC_CLOSING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,156,96,10
+    LTEXT           "When closing a file:",IDC_STATIC,6,172,204,8
+    CONTROL         "&Prompt to revert file from P4",
+                    IDC_REVERT_ON_CLOSE_CHECK,"Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP,30,184,144,10
+    LTEXT           "When opening a file, update e&xternal file references:",
+                    IDC_EXTERNAL_LABEL,6,202,222,8
+    CONTROL         "Always",IDC_SYNC_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,214,84,10
+    CONTROL         "Never",IDC_SYNC_NEVER_RADIO,"Button",BS_AUTORADIOBUTTON,
+                    30,226,78,10
+    CONTROL         "Prompt",IDC_SYNC_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,238,78,10
+END
+
+IDD_UGLY_DIALOG DIALOGEX 935, 350, 144, 20
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Photoshop"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_STATIC,0,0,0,0
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_FILE_OP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_OPEN_FILES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_OLD_VERSION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 464
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_OPEN_DEPOT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_HISTORY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 401
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_STATUS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_CONNECTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_RESULTS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_OLD_FULL_SUBMIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_FULL_SUBMIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_EXTERNAL_REF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_RESOLVE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_PASSWORD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_CHECK_IN_ADD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_TABBED_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_OPTIONS_PAGE1_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_OPTIONS_PAGE2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_UGLY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 935
+        RIGHTMARGIN, 350
+        TOPMARGIN, 144
+        BOTTOMMARGIN, 20
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FOLDER_CLOSED       BITMAP                  "..\\libp4gt\\folder_closed.bmp"
+IDB_FOLDER_OPEN         BITMAP                  "..\\libp4gt\\folder_open.bmp"
+IDB_DEPOT               BITMAP                  "..\\libp4gt\\depot.bmp"
+IDB_MAX_GRIP            BITMAP                  "..\\libp4gt\\maxgrip.bmp"
+IDB_SOFT_GRIP           BITMAP                  "..\\libp4gt\\softgrip.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS_DIALOG DLGINIT
+BEGIN
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_OTHER_DOCS_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_OTHER_DOCS_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_OTHER_DOCS_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_AUTO_LOCK_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_AUTO_LOCK_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_AUTO_LOCK_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_OPEN_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_OPEN_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_OPEN_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_FILE_REF_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_FILE_REF_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_FILE_REF_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    0
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

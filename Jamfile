@@ -1,0 +1,154 @@
+SubDir P4GT ;
+SubInclude P4GT libp4gt ;
+
+SubDirC++Flags [ FIncludes $(MSVCNT:J=" ")\\include
+                           $(MSVCNT:J=" ")\\atlmfc\\include
+               ] ;
+
+# Environment variables you can set:
+#
+#   TYPE - dyn builds
+#   TYPE - dyng builds
+#
+#   LANG - language ("ja" for Japanese builds)
+#
+#    eg. set LANG=ja    <== to set for Japanese builds
+#        set LANG=      <== to unset for English builds
+#
+#    set OSPLAT=X86 No more 32 bit builds.
+#    set OSPLAT=X64 <== to build x64 supported plugins
+#
+#    set MSVSVER=8  <== to build components requiring Visual Studio 2005 (vs8)
+#    set MSVSVER=9  <== to build components requiring Visual Studio 2008 (vs9)
+#    set MSVSVER=10 <== to build components requiring Visual Studio 2010 (vs10)
+#    set MSVSVER=12 <== to build components requiring Visual Studio 2013 (vs12)
+#    set MSVSVER=14 <== to build components requiring Visual Studio 2015 (vs14)
+#    set MSVSVER=15 <== to build components requiring Visual Studio 2017 (vs15)
+#    set MSVSVER=16 <== to build components requiring Visual Studio 2019 (vs16)
+#    set MSVSVER=17 <== to build components requiring Visual Studio 2022 (vs17)
+
+NOTFILE p4gt64    ;                          # 64-bit english  pseudotarget
+
+NOTFILE p4gt64_ja ;                          # 64-bit japanese pseudotarget
+
+
+local combo = $(OSPLAT:L)-$(MSVSVER:E=unknown)-$(TYPE:E=static)-$(LANG:E=en) ;
+
+# Echo "Info: combo=$(combo)" ;
+
+switch $(combo)
+{
+######
+## X64 ENGLISH
+######
+
+# Visual Studio 2012 builds for English Maya 2017.
+# To be retired very soon.
+#
+case x64-11-dyn*-en :
+	SubInclude P4GT maya ;                   # Maya 2017 (17.0.1720.0)
+
+	Depends p4gt64 :
+	           P4GT-Maya-2017_x64.mll        # Maya 2017 (17.0.1720.0)
+	         ;
+
+# Visual Studio 2015 update 3 builds for
+#	English Maya 2019
+#
+case x64-14-dyn*-en :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;                   # Maya 2019
+
+	Depends p4gt64 :
+	           P4GT-Maya-2019_x64.mll        # Maya 2019
+	         ;
+
+# Visual Studio English 2017 builds
+
+case x64-15-dyn*-en :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2020_x64.mll
+	         ;
+
+# Visual Studio English 2019 builds
+case x64-16-dyn*-en :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2023_x64.mll
+	         ;
+
+# Visual Studio English 2022 builds
+case x64-17-dyn*-en :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2024_x64.mll
+		     P4GT-Maya-2025_x64.mll
+		     P4GT-Maya-2026_x64.mll
+	         ;
+
+######
+## X64 JAPANESE
+######
+
+# Visual Studio 2012 builds for Japanese Maya 2017.
+# To be retired very soon.
+#
+case x64-11-dyn*-ja :
+	SubInclude P4GT maya ;                   # Maya 2017 (17.0.1720.0)
+
+	Depends p4gt64 :
+	           P4GT-Maya-2017_x64_ja.mll     # Maya 2017 (17.0.1720.0)
+	         ;
+
+# Visual Studio 2015 update 3 builds for
+#	Japanese Maya 2019
+#
+case x64-14-dyn*-ja :
+	SubInclude P4GT maya ;                    # Maya 2019
+
+	Depends p4gt64_ja :
+	           P4GT-Maya-2019_x64_ja.mll      # Maya 2019
+	         ;
+
+# Visual Studio Japanese 2017 builds
+
+case x64-15-dyn*-ja :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2020_x64_ja.mll
+	         ;
+
+# Visual Studio Japanese 2019 builds
+
+case x64-16-dyn*-ja :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2023_x64_ja.mll
+	         ;
+
+# Visual Studio Japanese 2022 builds
+case x64-17-dyn*-ja :
+	SubInclude P4GT libp4gt ;
+	SubInclude P4GT maya ;
+
+	Depends p4gt64 :
+	           P4GT-Maya-2024_x64_ja.mll
+		     P4GT-Maya-2025_x64_ja.mll
+		     P4GT-Maya-2026_x64_ja.mll
+	         ;
+
+case * :
+    # It's not an error if there's nothing to build.
+	Echo No GT plugins with build combination $(combo) ;
+}

@@ -1,0 +1,31 @@
+//
+// Copyright 2004 Perforce Software.  All rights reserved.
+//
+// This file is part of P4GT.
+//
+
+//
+// Create Perforce menu on main menubar
+//
+global proc perforceCreateUI () {
+  menu -p MayaWindow -label "P4" -tearOff false -pmc p4UpdateMenu PerforceMenu;
+    menuItem -label "Add to P4" -command p4Add PerforceAddMenuItem;
+    menuItem -label "Check Out" -command p4Edit PerforceCheckOutMenuItem;
+    menuItem -label "Check In..." -command p4Submit PerforceCheckInMenuItem;
+    menuItem -label "Lock/Unlock File" -command p4Lock PerforceLockMenuItem;
+    menuItem -label "Undo Add/Check Out" -command p4Revert PerforceUndoMenuItem;
+    menuItem -divider true;
+    menuItem -label "Result of Last Command..." -command p4Results PerforceResultsMenuItem;
+    menuItem -label "File Status..." -command p4Stat PerforceStatusMenuItem;
+    menuItem -label "File History..." -command p4History PerforceHistoryMenuItem;
+    menuItem -label "Checked Out Files..." -command p4Opened PerforceOpenedMenuItem;
+    menuItem -label "P4 Information..." -command p4Info PerforceInfoMenuItem;
+    menuItem -divider true;
+    menuItem -label "Get Latest Revision from P4..." -command p4Open PerforceOpenMenuItem;
+    menuItem -divider true;
+    menuItem -label "Options..." -command p4Options PerforceOptionsMenuItem;
+    menuItem -label "Help..." -command p4Help PerforceHelpMenuItem;
+    menuItem -label "About P4GT..." -command p4About PerforceAboutMenuItem;
+    menuItem -divider true;
+    menuItem -label "Disconnect from Server" -command p4Online PerforceOnlineMenuItem;
+}

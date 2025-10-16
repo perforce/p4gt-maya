@@ -1,0 +1,899 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "libp4gt_rc.h"
+#include "version.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+//#include "afxres.h"
+#include "WinResrc.h"
+#define IDC_STATIC  -1
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "libp4gt_rc.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif	// APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// "Japanese" Dialogs
+//
+
+IDD_FILE_OP_DIALOG DIALOG  0, 0, 324, 182
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "Dialog"
+CAPTION "ダイアログ"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "Filename:"
+    LTEXT           "ファイル名:",IDC_STATIC,5,5,60,8
+    EDITTEXT        IDC_FILENAME_EDIT,5,15,315,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Result:"
+    LTEXT           "結果:",IDC_STATIC,5,30,50,8
+    EDITTEXT        IDC_RESULTS_EDIT,5,40,315,110,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,135,165,50,14
+			// "&Don't show this dialog again."			"Button"
+    CONTROL         "以降このダイアログを表示しない(&D)",IDC_HIDE_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,300,10
+END
+
+IDD_OPEN_FILES_DIALOG DIALOG  0, 0, 329, 157
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Checked Out Documents"
+CAPTION "P4GT - チェックアウトされたドキュメント"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,139,140,50,14
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | WS_BORDER |
+                    WS_TABSTOP,5,15,320,115
+    LTEXT           "ドキュメント(&D):",IDC_STATIC,5,5,80,8
+END
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 264, 152
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - Options"
+CAPTION "P4GT - オプション"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "&Display confirmation dialogs (on add/check out):"
+    LTEXT           "確認ダイアログを表示(追加/チェックアウト時)(&D):",
+                    IDC_STATIC,5,5,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_SHOW_DIALOGS_COMBO,200,5,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "&View other documents in changelist when checking in:"
+    LTEXT           "チェックイン時にチェンジリスト内の他のドキュメントを表示する(&V):",
+                    IDC_STATIC,5,20,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_OTHER_DOCS_COMBO,200,20,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "&Lock document when checking out:"
+    LTEXT           "チェックアウト時にドキュメントをロックする(&L):",IDC_STATIC,5,35,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_AUTO_LOCK_COMBO,200,35,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "Check in immediately after &adding a document to P4:"
+    LTEXT           "ドキュメントをP4に追加後すぐにチェックインする(&A):",
+                    IDC_STATIC,5,50,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CHECK_IN_ADD_COMBO,200,50,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "Check out when &opening document:"
+    LTEXT           "ドキュメントを開いたときにチェックアウトする(&O):",IDC_STATIC,5,65,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_OPEN_COMBO,200,65,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "Check out when &reopening document after undo (revert):"
+    LTEXT           "ドキュメントを元に戻した後の再オープン時にチェックアウトする(&R):",
+                    IDC_STATIC,5,80,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_REOPEN_COMBO,200,80,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "Check in when &closing document:"
+	LTEXT           "ドキュメントを閉じる際にチェックインする(&C):",IDC_STATIC,5,95,190,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_PROMPT_CLOSE_COMBO,200,95,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "&Sync external file references when opening document:"
+    LTEXT           "ドキュメントを開く際に外部ファイルの参照を同期する(&S):",
+                    IDC_REFS_STATIC,5,110,190,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_FILE_REF_COMBO,200,110,60,40,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,77,135,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,137,135,50,14
+END
+
+IDD_OLD_VERSION_DIALOG DIALOGEX 0, 0, 34000, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - Get Latest Revision/Checkout"
+CAPTION "P4GT - 最新リビジョンを取得/チェックアウト"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "This document is in P4."
+    LTEXT           "このドキュメントはP4に存在します",IDC_DOCUMENT_TEXT,10,5,
+                    360,8
+    LTEXT           "",IDC_VERSION_TEXT,10,20,360,20
+			// "Click 'Get Latest Revision' to copy the latest version from the depot to your computer which you can then check out."
+    LTEXT           "最新バージョンをディポからお使いのコンピュータにコピーし、後でチェックアウトできるようにするには、[最新リビジョンを取得]をクリックします。",
+                    IDC_STATIC,7,45,363,20
+			// "Click 'Checkout' to check your current version out - you will be required to resolve your changes with the newest version in P4 when you check in."
+    LTEXT           "現在のバージョンをチェックアウトするには、[チェックアウト]をクリックします。チェックインする際、変更内容とP4内の最新バージョンとの衝突を解決するよう要求されます。",
+                    IDC_STATIC,7,70,457,30
+			// "&Get Latest Revision"
+    DEFPUSHBUTTON   "最新リビジョンを取得(&G)",IDSYNC,111,105,106,14
+			// "Check&out"
+    PUSHBUTTON      "チェックアウト(&O)",IDCHECKOUT,222,105,79,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,306,105,54,14
+END
+
+IDD_ABOUT_DIALOG DIALOGEX 0, 0, 269, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - About"
+CAPTION "P4GT - P4GTについて"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,110,75,50,14
+    LTEXT           "",IDC_PLUGIN_NAME_TEXT,5,5,255,8
+    LTEXT           "",IDC_APP_VERSION_TEXT,5,30,260,8
+    LTEXT           "",IDC_WIN_VERSION_TEXT,5,39,260,8
+    LTEXT           P4_COPYRIGHT,
+                    IDC_COPYRIGHT_TEXT,5,55,175,8
+    LTEXT           "",IDC_PLUGIN_VERSION_TEXT,5,14,255,8
+    PUSHBUTTON      "Copy to Clipboard",IDCOPY,193,75,69,14
+END
+
+IDD_OPEN_DEPOT_DIALOG DIALOGEX 0, 0, 300, 185
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Get Latest Revision from P4"
+CAPTION "P4GT - P4から最新リビジョンを取得"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "&Look in:"
+    LTEXT           "調査対象(&L):",IDC_STATIC,5,5,50,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_LOOK_IN_COMBO,"ComboBoxEx32",CBS_DROPDOWNLIST |
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,53,5,146,72
+    CONTROL         "List1",IDC_DEPOT_LIST,"SysListView32",LVS_SINGLESEL |
+                    LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,5,24,273,
+                    110
+			// "&File name:"
+    LTEXT           "ファイル名(&F):",IDC_FILE_NAME_LABEL,5,140,56,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OPEN_FILE_EDIT,85,140,126,12,ES_AUTOHSCROLL
+			// "Files of &type:"
+    LTEXT           "ファイルのタイプ(&T):",IDC_FILE_TYPE_LABEL,5,157,81,12,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_FILE_TYPE_COMBO,"ComboBoxEx32",CBS_DROPDOWNLIST |
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,85,156,126,98
+ 			// "Open"
+ 	DEFPUSHBUTTON   "オープン",IDOK,218,140,50,14
+			// "Cancel"
+   PUSHBUTTON      "キャンセル",IDCANCEL,218,158,50,14
+END
+
+IDD_HISTORY_DIALOG DIALOGEX 0, 0, 408, 210
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Document History"
+CAPTION "P4GT - ドキュメント履歴"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    CONTROL         "List1",IDC_HISTORY_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,5,394,95
+    LTEXT           "",IDC_HISTORY_DESC_TEXT,5,106,155,8
+    EDITTEXT        IDC_HISTORY_DESC_EDIT,7,115,394,65,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY
+			// "&View"
+    PUSHBUTTON      "表示(&V)",ID_VIEW,7,188,50,14
+			// "Close"
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,350,188,50,14
+			// "&Sync"
+    PUSHBUTTON      "同期(&S)",ID_SYNC,68,188,50,14
+END
+
+IDD_STATUS_DIALOG DIALOG  0, 0, 309, 197
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Document Status"
+CAPTION "P4GT - ドキュメントのステータス"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "Depot path:"
+    LTEXT           "ディポのパス:",IDC_STATIC,5,5,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_DEPOT_PATH_EDIT,55,5,250,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Client path:"
+    LTEXT           "クライアントのパス:",IDC_STATIC,5,20,34,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_PATH_EDIT,55,20,250,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "File type:"
+    LTEXT           "ファイルタイプ:",IDC_STATIC,5,40,31,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILE_TYPE_EDIT,100,40,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "Latest (head)  revision in depot :"
+    LTEXT           "ディポ内の最新リビジョン:",IDC_STATIC,5,55,95,
+                    12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_REVISION_EDIT,100,55,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "Revision in your workspace:"
+    LTEXT           "ワークスペース内のリビジョン:",IDC_HAVE_REVISION_LABEL,
+                    160,55,85,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HAVE_REVISION_EDIT,260,55,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "Latest (head) action in depot:"
+    LTEXT           "ディポ内での最新のアクション:",IDC_STATIC,5,70,87,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_ACTION_EDIT,100,70,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "Latest (head) changelist in depot: "
+    LTEXT           "ディポ内の最新のチェンジリスト: ",
+                    IDC_HEAD_CHANGE_LABEL,160,70,101,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_CHANGE_EDIT,260,70,45,12,ES_RIGHT |
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+			// "Open by you for:"
+    LTEXT           "現ユーザのためにこの目的で開きます:",IDC_STATIC,5,85,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_ACTION_EDIT,100,85,45,12,ES_RIGHT | ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "In changelist:"
+    LTEXT           "チェンジリスト:",IDC_CHANGE_LABEL,160,85,40,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CHANGE_EDIT,260,85,45,12,ES_RIGHT | ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Last modified in depot:"
+    LTEXT           "ディポ内での最終更新日:",IDC_STATIC,5,105,68,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_HEAD_TIME_EDIT,100,105,205,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Open by P4 user(s):"
+    LTEXT           "P4ユーザによって開かれます:",IDC_STATIC,5,120,90,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_OPENED_BY_EDIT,100,120,205,37,ES_MULTILINE |
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | NOT
+                    WS_TABSTOP
+			// "Locked by:"
+    LTEXT           "ロック実行者:",IDC_LOCKED_BY_LABEL,5,160,40,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_LOCKED_BY_EDIT,100,160,205,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,129,180,50,14
+END
+
+IDD_CONNECTION_DIALOG DIALOG  0, 0, 259, 172
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - P4 Connection Information"
+CAPTION "P4GT - P4接続情報"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "User name:"
+    LTEXT           "ユーザ名:",IDC_STATIC,5,5,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_USER_NAME_EDIT,60,5,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Client host:"
+    LTEXT           "クライアントのホスト:",IDC_CLIENT_HOST_LABEL,145,5,36,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_HOST_EDIT,195,5,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Client name:"
+    LTEXT           "クライアント名:",IDC_STATIC,5,20,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_NAME_EDIT,60,20,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Client address:"
+    LTEXT           "クライアントのアドレス:",IDC_CLIENT_ADDRESS_LABEL,145,20,45,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_ADDRESS_EDIT,195,20,60,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Client root:"
+    LTEXT           "クライアント・ルート:",IDC_STATIC,5,35,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_CLIENT_ROOT_EDIT,60,35,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Current directory:"
+    LTEXT           "現在のディレクトリ:",IDC_STATIC,5,50,50,12,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CURRENT_DIRECTORY_EDIT,60,50,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Server address:"
+    LTEXT           "サーバのアドレス:",IDC_STATIC,5,75,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_ADDRESS_EDIT,60,75,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Server date:"
+    LTEXT           "サーバ日付:",IDC_STATIC,5,90,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_DATE_EDIT,60,90,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Server version:"
+    LTEXT           "サーバのバージョン:",IDC_STATIC,5,105,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_VERSION_EDIT,60,105,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Server license:"
+    LTEXT           "サーバ・ライセンス:",IDC_STATIC,5,120,45,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_LICENSE_EDIT,60,120,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "Server root:"
+    LTEXT           "サーバ・ルート:",IDC_STATIC,5,135,50,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SERVER_ROOT_EDIT,60,135,195,12,ES_AUTOHSCROLL |
+                    ES_READONLY | NOT WS_TABSTOP
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,104,155,50,14
+END
+
+IDD_RESULTS_DIALOG DIALOG  0, 0, 324, 152
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "xxxx"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "&Result:"
+    LTEXT           "結果(&R):",IDC_STATIC,5,5,45,8
+    EDITTEXT        IDC_RESULTS_EDIT,5,15,315,110,ES_MULTILINE |
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT
+                    WS_TABSTOP
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,137,135,50,14
+END
+
+IDD_OLD_FULL_SUBMIT_DIALOG DIALOG  0, 0, 329, 300
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Check In to P4"
+CAPTION "P4GT - P4へのチェックイン"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "&Change Description:"
+    LTEXT           "コメントの変更(&C):",IDC_STATIC,5,5,95,8
+    EDITTEXT        IDC_CHANGE_DESC_EDIT,5,15,320,55,ES_MULTILINE |
+                    ES_WANTRETURN
+			// "Job &Status:"
+    LTEXT           "ジョブのステータス(&S):",IDC_STATUS_LABEL,180,75,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_JOB_STATUS_COMBO,220,75,105,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "&Jobs:"
+    LTEXT           "ジョブ(&J):",IDC_JOBS_LABEL,5,80,40,8
+    CONTROL         "List1",IDC_OPEN_JOB_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,90,320,55
+			// "&Documents:"
+    LTEXT           "ドキュメント(&D):",IDC_DOCUMENTS_LABEL,5,155,65,8
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,165,320,50
+			// "&Keep checked out"						"Button"
+    CONTROL         "チェックアウト状態を維持(&K)",IDC_KEEP_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,220,180,10
+			// "Submit"
+    DEFPUSHBUTTON   "サブミット",IDOK,110,237,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,168,237,50,14
+END
+
+IDD_FULL_SUBMIT_DIALOG DIALOG  0, 0, 360, 270
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Check In to P4"
+CAPTION "P4GT - P4にチェックイン"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+ 			// "&Change Description:"
+    LTEXT           "コメントの変更(&C):",IDC_STATIC,5,5,95,8
+    EDITTEXT        IDC_CHANGE_DESC_EDIT,5,15,350,55,ES_MULTILINE |
+                    ES_WANTRETURN
+			// "Job &Status:"
+    LTEXT           "ジョブのステータス(&S):",IDC_STATUS_LABEL,180,75,40,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_JOB_STATUS_COMBO,220,75,135,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+			// "&Jobs:"
+    LTEXT           "ジョブ(&J):",IDC_JOBS_LABEL,5,80,40,8
+    CONTROL         "List1",IDC_OPEN_JOB_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,90,350,55
+			// "&Files:"
+    CONTROL         "ファイル(&F):",IDC_SELECT_ALL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,65,8
+    CONTROL         "List1",IDC_OPEN_FILE_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER |
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,165,350,50
+			// "&Keep checked out"
+    CONTROL         "チェックアウト状態を維持(&K)",IDC_KEEP_OUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,220,130,10
+			// "&On submit:"
+    LTEXT           "サブミット時(&O):",IDC_SUBMIT_OPTIONS_LABEL,168,220,40,12,
+    				SS_CENTERIMAGE
+    COMBOBOX        IDC_SUBMIT_OPTIONS_COMBO,209,220,116,50,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+ 		   // Submit
+ 	DEFPUSHBUTTON   "サブミット",IDOK,125,237,50,14
+ 		  // Cancel
+	PUSHBUTTON      "キャンセル",IDCANCEL,183,237,50,14
+END
+
+IDD_EXTERNAL_REF_DIALOG DIALOG  0, 0, 365, 137
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+// CAPTION "P4GT - Sync External Reference Files"
+CAPTION "P4GT - 外部参照ファイルに同期"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "You have old versions of the external reference files listed below. Click Sync to copy the latest versions of the checked files from the depot to your computer."
+    LTEXT           "以下に示す、外部参照ファイルの古いバージョンがあります。チェックしたファイルの最新バージョンをディポからお使いのコンピュータにコピーするには、[同期]をクリックします。",
+                    IDC_STATIC,5,5,348,20
+    CONTROL         "List1",IDC_FILES_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER |
+                    WS_BORDER | WS_TABSTOP,5,25,270,85
+			// "Sync"
+    DEFPUSHBUTTON   "同期",IDOK,84,120,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,144,120,50,14
+END
+
+IDD_RESOLVE_DIALOG DIALOGEX 0, 0, 315, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - Resolve Conflicts"
+CAPTION "P4GT - 衝突を解決する"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "You've edited an old version of this document, or another user has checked a new version into the depot. What would you like to do?"
+    LTEXT           "このドキュメントの古いバージョンが編集されたか、別のユーザが新しいバージョンをディポにチェックインしました。どのように処理しますか?",
+                    IDC_STATIC,5,5,303,20
+			// "&Cancel the check-in (keep checked out)."
+    CONTROL         "チェックインをキャンセル（チェックアウト状態を維持）(&C)",
+                    IDC_CANCEL_RADIO,"Button",BS_AUTORADIOBUTTON,5,25,235,10
+			// "Check in your &version, superseding the changes in the current depot version."
+    CONTROL         "自分のバージョンをチェックインし、現在のディポ・バージョンの変更を破棄(&V)",
+                    IDC_CHECK_IN_RADIO,"Button",BS_AUTORADIOBUTTON,5,35,303,
+                    10
+			// "&Undo check-out and discard your changes."
+    CONTROL         "チェックアウトを取り消し、変更を破棄(&U)",
+                    IDC_UNDO_RADIO,"Button",BS_AUTORADIOBUTTON,5,45,170,10
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,82,65,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,142,65,50,14
+END
+
+IDD_PASSWORD_DIALOG DIALOG  0, 0, 199, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - P4 Password Required"
+CAPTION "P4GT - P4パスワードが必要"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    LTEXT           "xx df dfjkdfg dfhg kdfgh dfkg dkfjgh dfgh dfgh dfgh dkjfgh dkfgh dkfgh dkjfgh dkg dkfg dkjghdk gkh gkjd",
+                    IDC_USER_PORT_TEXT1,5,5,190,20
+			// "Please enter the password:"
+    LTEXT           "パスワードを入力してください:",IDC_STATIC,5,30,105,10
+    EDITTEXT        IDC_PASSWORD_EDIT,5,40,190,12,ES_PASSWORD |
+                    ES_AUTOHSCROLL
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,90,60,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,145,60,50,14
+END
+
+IDD_CHECK_IN_ADD_DIALOG DIALOGEX 0, 0, 179, 67
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+// CAPTION "P4GT - Add Document to P4"
+CAPTION "P4GT - ドキュメントをP4に追加"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,50,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,95,50,50,14
+			// "You have successfully added the document to P4 - would you like to check it in now?"
+    LTEXT           "ドキュメントのP4への追加が成功しました。すぐにチェックインしますか?",
+                    IDC_STATIC,5,5,168,20
+			// "&Don't show this dialog again."					"Button"
+    CONTROL         "以降このダイアログを表示しない(&D)",IDC_HIDE_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,30,170,10
+END
+
+IDD_TABBED_OPTIONS_DIALOG DIALOGEX 0, 0, 310, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+    WS_SYSMENU
+// CAPTION "P4GT - Options"
+CAPTION "P4GT - オプション"
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "OK"
+    DEFPUSHBUTTON   "OK",IDOK,89,285,50,14
+			// "Cancel"
+    PUSHBUTTON      "キャンセル",IDCANCEL,146,285,50,14
+    CONTROL         "",IDC_OPTIONS_TAB,"SysTabControl32",WS_TABSTOP,2,5,306,
+                    272
+    LTEXT           "静止",IDC_PLACEHOLDER_LABEL,15,25,19,8
+    PUSHBUTTON      "適用",IDAPPLY,202,285,50,14
+END
+
+IDD_OPTIONS_PAGE1_DIALOG DIALOGEX 0, 0, 290, 177
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "When &adding a document to P4, check in immediately:"
+    LTEXT           "ドキュメントをP4に追加する際、ただちにチェックインする(&A):",
+                    IDC_STATIC,7,7,257,8
+			// "Always"							"Button"
+    CONTROL         "常に実行",IDC_ADDING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,18,84,10
+ 			// "Never"							"Button"
+ 	CONTROL         "実行しない",IDC_ADDING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,30,95,10
+ 			// "Prompt"							"Button"
+ 	CONTROL         "実行を確認",IDC_ADDING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,42,90,10
+			// "When checking out a document, automatically &lock it (prevent others from checking it in while you have it checked out):"
+    LTEXT           "ドキュメントをチェックアウトする際、自動的にロックする(自分がチェックアウトしている間は他のユーザがチェックインできないようにする)(&L):",
+                    IDC_STATIC,7,60,270,16
+			// "Always"							"Button"
+    CONTROL         "常に実行",IDC_LOCK_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,78,90,10
+			// "Never"							"Button"
+    CONTROL         "実行しない",IDC_LOCK_NEVER_RADIO,"Button",BS_AUTORADIOBUTTON,
+                    30,90,102,10
+			// "Prompt"							"Button"
+    CONTROL         "実行を確認",IDC_LOCK_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,102,90,10
+			// "When checking in a document:"	"Button"
+    LTEXT           "ドキュメントをチェックインするとき:",IDC_STATIC,6,120,204,8
+			// "&View other documents in changelist"	"Button"
+    CONTROL         "チェンジリスト内の他のドキュメントを表示(&V)",
+                    IDC_OTHER_DOCS_CHECK,"Button",BS_AUTOCHECKBOX |
+                    WS_TABSTOP,30,132,188,10
+			// "Informational prompts:"
+    LTEXT           "情報表示のプロンプト:",IDC_STATIC,6,150,162,8
+			// "Display &confirmation dialogs (on add/check out)"	"Button"
+    CONTROL         "確認ダイアログを表示（追加/チェックアウト時）(&C)",
+                    IDC_CONFIRM_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    30,162,208,10
+END
+
+IDD_OPTIONS_PAGE2_DIALOG DIALOGEX 0, 0, 290, 251
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+			// "When &opening a document, check out from P4:"
+    LTEXT           "ドキュメントを開く際、P4からチェックアウトする(&O):",
+                    IDC_STATIC,7,7,261,8
+			// "Always"								"Button"
+    CONTROL         "常に実行",IDC_OPENING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,18,78,10
+			// "Never"								"Button"
+    CONTROL         "実行しない",IDC_OPENING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,30,84,10
+			// "Prompt"								"Button"
+    CONTROL         "実行を確認",IDC_OPENING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,42,84,10
+			// "When &reopening a document, after undo (reverting), check out from P4:"
+    LTEXT           "ドキュメントを元に戻した後に再オープンするとき、P4からチェックアウトする(&R):",
+                    IDC_STATIC,6,60,252,18
+			// "Always"								"Button"
+    CONTROL         "常に実行",IDC_REOPENING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,78,96,10
+			// "Never"								"Button"
+    CONTROL         "実行しない",IDC_REOPENING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,90,96,10
+			// "Prompt"								"Button"
+    CONTROL         "実行を確認",IDC_REOPENING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,102,102,10
+			// "When closing a document, chec&k in to P4:"
+    LTEXT           "ドキュメントを閉じる際、P4にチェックインする(&K):",
+                    IDC_STATIC,6,120,222,8
+			// "Always"								"Button"
+    CONTROL         "常に実行",IDC_CLOSING_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,132,102,10
+			// "Never"								"Button"
+    CONTROL         "実行しない",IDC_CLOSING_NEVER_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,144,90,10
+			// "Prompt"								"Button"
+    CONTROL         "実行を確認",IDC_CLOSING_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,156,96,10
+			// "When closing a document:"
+    LTEXT           "ドキュメントを閉じる際:",IDC_STATIC,6,172,204,8
+			// "&Prompt to revert file from P4"	"Button"
+    CONTROL         "P4からファイルを元に戻すかを確認(&P)",
+                    IDC_REVERT_ON_CLOSE_CHECK,"Button", BS_AUTOCHECKBOX |
+                    WS_TABSTOP,30,184,182,10
+			// "When opening a document, update e&xternal file references:"
+    LTEXT           "ドキュメントを開く際、外部ファイル参照を更新する(&X):",
+                    IDC_EXTERNAL_LABEL,6,202,222,8
+			// "Always"							"Button"
+    CONTROL         "常に実行",IDC_SYNC_ALWAYS_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,30,214,84,10
+			// "Never"							"Button"
+    CONTROL         "実行しない",IDC_SYNC_NEVER_RADIO,"Button",BS_AUTORADIOBUTTON,
+                    30,226,78,10
+			// "Prompt"							"Button"
+    CONTROL         "実行を確認",IDC_SYNC_PROMPT_RADIO,"Button",
+                    BS_AUTORADIOBUTTON,30,238,78,10
+END
+
+IDD_UGLY_DIALOG DIALOGEX 935, 350, 144, 20
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "P4GT - Photoshop ゴシック"
+//FONT 8, "MS Sans Serif", 0, 0, 0x0
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    LTEXT           "",IDC_STATIC,0,0,0,0
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_FILE_OP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_OPEN_FILES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_OLD_VERSION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_OPEN_DEPOT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_HISTORY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 401
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_STATUS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_CONNECTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_RESULTS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_OLD_FULL_SUBMIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_FULL_SUBMIT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_EXTERNAL_REF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_RESOLVE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_PASSWORD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_CHECK_IN_ADD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_TABBED_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_OPTIONS_PAGE1_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_OPTIONS_PAGE2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_UGLY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 935
+        RIGHTMARGIN, 350
+        TOPMARGIN, 144
+        BOTTOMMARGIN, 20
+    END
+END
+#endif	// APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FOLDER_CLOSED       BITMAP                  "..\\libp4gt\\folder_closed.bmp"
+IDB_FOLDER_OPEN         BITMAP                  "..\\libp4gt\\folder_open.bmp"
+IDB_DEPOT               BITMAP                  "..\\libp4gt\\depot.bmp"
+IDB_MAX_GRIP            BITMAP                  "..\\libp4gt\\maxgrip.bmp"
+IDB_SOFT_GRIP           BITMAP                  "..\\libp4gt\\softgrip.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS_DIALOG DLGINIT
+BEGIN
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_SHOW_DIALOGS_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_OTHER_DOCS_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_OTHER_DOCS_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_OTHER_DOCS_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_AUTO_LOCK_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_AUTO_LOCK_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_AUTO_LOCK_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_CHECK_IN_ADD_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_OPEN_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_OPEN_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_OPEN_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_REOPEN_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_PROMPT_CLOSE_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    IDC_FILE_REF_COMBO, 0x403, 6, 0
+0x454e, 0x4556, 0x0052,
+    IDC_FILE_REF_COMBO, 0x403, 7, 0
+0x4c41, 0x4157, 0x5359, "\000"
+    IDC_FILE_REF_COMBO, 0x403, 7, 0
+0x5250, 0x4d4f, 0x5450, "\000"
+    0
+END
+
+#endif    // Japanese resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

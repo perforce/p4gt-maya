@@ -1,0 +1,6 @@
+LIBRARY P4GT-Maya-2026_x64.mll
+EXPORTS
+	initializePlugin		@1
+	uninitializePlugin		@2
+SECTIONS
+	.data READ WRITE
