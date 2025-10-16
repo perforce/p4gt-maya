@@ -1,7 +1,5 @@
 # p4-gt Jamrules
 #
-# Do not put anything in this file: all rules go in p4/Jamrules.
-#
 
 SubDir AllP4 p4-gt ;
 SubRules AllP4 p4 : P4 ;
