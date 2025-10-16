@@ -103,7 +103,7 @@ To build the Maya plugin (`.mll` file), follow these steps:
    tools\bldmaya.bat
    ```
    
-7. Locate the output .8li file:
+7. Locate the output .mll file:
    ```bash
    For English: p4-bin\bin.ntx64\en\dyn
    For Japanese: p4-bin\bin.ntx64\ja\dyn
