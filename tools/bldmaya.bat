@@ -5,7 +5,7 @@ REM Run this batch file fro top level p4-gt directory.
 REM
 
 REM rel_year is the release year of the *Autodesk Maya* that P4GT-Maya is built for.
-set rel_year=2026
+set rel_year=2027
 
 jam -a -s BUILD=en -s LDAPSTUB=no -s SSL=yes -s SSLVER=3 -s USE_WILDARGS=no -s OSPLAT=X64 -s TYPE=dyn -s LANG=en -s SMARTHEAP=no clean
 

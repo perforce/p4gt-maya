@@ -91,6 +91,7 @@ case x64-17-dyn*-en :
 	           P4GT-Maya-2024_x64.mll
 		     P4GT-Maya-2025_x64.mll
 		     P4GT-Maya-2026_x64.mll
+			   P4GT-Maya-2027_x64.mll
 	         ;
 
 ######
@@ -146,6 +147,7 @@ case x64-17-dyn*-ja :
 	           P4GT-Maya-2024_x64_ja.mll
 		     P4GT-Maya-2025_x64_ja.mll
 		     P4GT-Maya-2026_x64_ja.mll
+			   P4GT-Maya-2027_x64_ja.mll
 	         ;
 
 case * :

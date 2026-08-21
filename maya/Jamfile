@@ -1,5 +1,5 @@
 ##
-## P4GT Maya 2026 (2026 for Autodesk Maya 2026)
+## P4GT Maya 2027 (2027 for Autodesk Maya 2027)
 ##
 ## TYPE=dyn or dyng
 ##
@@ -20,7 +20,7 @@ WinDefines : UNICODE _UNICODE ;
 
 P4GTDefines ;
 
-local DLLFILE     = P4GT-Maya-2026_x64.mll ;
+local DLLFILE     = P4GT-Maya-2027_x64.mll ;
 local GTLIBFILE   = libp4gt.lib ;
 local MAYALIBFILE = libp4gt-maya.lib ;
 local DEFFILE     = P4GTMaya_x64.def ;
@@ -28,7 +28,7 @@ local RCFILE      = P4GTMaya.rc ;
 
 if $(LANG) = ja
 {
-	DLLFILE     = P4GT-Maya-2026_x64_ja.mll ;
+	DLLFILE     = P4GT-Maya-2027_x64_ja.mll ;
 	GTLIBFILE   = libp4gt_ja.lib ;
 	MAYALIBFILE = libp4gt-maya_ja.lib ;
 	DEFFILE     = P4GTMaya_x64_ja.def ;

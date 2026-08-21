@@ -48,7 +48,7 @@ SET P4_INT_MINOR=%P4_CHANGELEVEL:~3%
 ::
 ECHO #define P4_FILE_VERSION %P4_YEAR%.%P4_RELEASE%.%P4_INT_MAJOR%.%P4_INT_MINOR% > %TargetFile%
 ECHO #define P4_PRODUCT_VERSION "%P4_YEAR%.%P4_RELEASE%.%P4_INT_MAJOR%.%P4_INT_MINOR%" >> %TargetFile%
-ECHO #define P4_COPYRIGHT "Copyright (C) 2004-2025 Perforce Software, Inc." >> %TargetFile%
+ECHO #define P4_COPYRIGHT "Copyright (C) 2004-2026 Perforce Software, Inc." >> %TargetFile%
 ECHO #define P4_INT_MAJOR %P4_INT_MAJOR% >> %TargetFile%
 ECHO #define P4_INT_MINOR %P4_INT_MINOR% >> %TargetFile%
 ECHO #define P4_INT_HBUILD 0 >> %TargetFile%

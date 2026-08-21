@@ -1,4 +1,4 @@
-LIBRARY P4GT-Maya-2026_x64_ja.mll
+LIBRARY P4GT-Maya-2027_x64_ja.mll
 EXPORTS
 	initializePlugin		@1
 	uninitializePlugin		@2
